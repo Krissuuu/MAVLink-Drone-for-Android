@@ -228,7 +228,6 @@
         android:background="#000000"
         android:textColor="#FFFFFF"
         android:scrollbars="vertical"
-        android:text="DEBUG: "
         android:gravity="bottom" />
 
 <!--    <TextView-->
