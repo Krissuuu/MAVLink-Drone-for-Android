@@ -2,7 +2,7 @@
     <string name="app_name">AED_drone</string>
 
     <string-array name='connect_type'>
-        <item>TCP</item>
+        <item>WIFI</item>
         <item>USB</item>
     </string-array>
 
