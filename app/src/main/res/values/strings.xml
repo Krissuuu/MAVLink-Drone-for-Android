@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">AED_drone</string>
+
+    <string-array name='connect_type'>
+        <item>TCP</item>
+        <item>USB</item>
+    </string-array>
+
+    <string-array name='mode'>
+        <item>STABILIZE</item>
+        <item>ACRO</item>
+        <item>ALT_HOLD</item>
+        <item>AUTO</item>
+        <item>GUIDED</item>
+        <item>LOITER</item>
+        <item>RTL</item>
+        <item>CIRCLE</item>
+        <item>POSITION</item>
+        <item>LAND</item>
+    </string-array>
+</resources>

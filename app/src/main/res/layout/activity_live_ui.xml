@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.aed_drone.MainActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="60dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_swapCamera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="前後置"/>
+        <Button
+            android:id="@+id/btn_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="濾鏡"/>
+        <Button
+            android:id="@+id/btn_screenshot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="截幀"/>
+        <Button
+            android:id="@+id/btn_mirror"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="鏡像"/>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_startStreaming"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="開始推流"/>
+        <Button
+            android:id="@+id/btn_stopStreaming"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="停止推流"/>
+
+        <Button
+            android:id="@+id/btn_startRecord"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="開始錄製"/>
+        <Button
+            android:id="@+id/btn_stopRecord"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="保存錄製"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
