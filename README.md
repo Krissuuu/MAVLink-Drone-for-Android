@@ -5,7 +5,7 @@ You can choose to use Wi-Fi or USB to connect to Pixhawk, but if you use Wi-Fi, 
 
 After you select the connection method, click "CONNECT" and if the connection is successful, "Pixhawk Status" will be displayed as "Connected".
 
-If you use Wi-Fi, you need to change the Broker path, please refer to the figure below.
+If you use Wi-Fi, you need to change the Socket path, please refer to the figure below.
 
 ![](https://i.imgur.com/5cSE3v8.png)
 
