@@ -168,6 +168,6 @@ else if(message.getPayload() instanceof GlobalPositionInt){
 
 ## *<a id="D">Reference</a>*
 
-https://github.com/dronefleet/mavlink
-https://github.com/felHR85/UsbSerial
+1. https://github.com/dronefleet/mavlink
+2. https://github.com/felHR85/UsbSerial
 
