@@ -40,12 +40,11 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
-    implementation 'io.dronefleet.mavlink:mavlink:1.1.8'
-//    implementation 'com.github.felHR85:UsbSerial:6.1.0'
+    implementation 'io.dronefleet.mavlink:mavlink:1.1.9'
+
     implementation project(':usbserial')
     implementation ('org.eclipse.paho:org.eclipse.paho.android.service:1.0.2') {
         exclude module: 'support-v4'
     }
     implementation 'androidx.localbroadcastmanager:localbroadcastmanager:1.0.0'
-    implementation project(':libWSLive')
 }

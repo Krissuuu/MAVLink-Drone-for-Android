@@ -1,4 +1,3 @@
-include ':libWSLive'
 include ':usbserial'
 include ':app'
-rootProject.name = "AED_drone"
+rootProject.name = "MAVLink_Drone"

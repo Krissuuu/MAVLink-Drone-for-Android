@@ -1,8 +1,8 @@
 <resources>
-    <string name="app_name">AED_drone</string>
+    <string name="app_name">MAVLink Drone</string>
 
     <string-array name='connect_type'>
-        <item>WIFI</item>
+        <item>TCP</item>
         <item>USB</item>
     </string-array>
 
@@ -18,4 +18,5 @@
         <item>POSITION</item>
         <item>LAND</item>
     </string-array>
+
 </resources>

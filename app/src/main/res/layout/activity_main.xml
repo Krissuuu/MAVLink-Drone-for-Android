@@ -13,19 +13,18 @@
         android:orientation="horizontal">
 
         <Spinner
-            android:id="@+id/spinner"
+            android:id="@+id/spinner_connection_type"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:entries="@array/connect_type" />
 
         <Spinner
-            android:id="@+id/spinner_mode"
+            android:id="@+id/spinner_flight_mode"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:entries="@array/mode" />
 
         <Button
-            android:id="@+id/connect"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="connect"
@@ -39,92 +38,100 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/mqtt_connect"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:onClick="mqtt_connect"
-            android:text="MQTT CONNECT" />
-        <Button
-            android:id="@+id/STATUS"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="status"
-            android:text="Drone STATUS"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <!--        <TextView-->
-        <!--            android:id="@+id/textView"-->
-        <!--            android:layout_width="match_parent"-->
-        <!--            android:layout_height="200dp"-->
-        <!--            android:layout_centerHorizontal="true"-->
-        <!--            android:layout_marginTop="10dp"-->
-        <!--            android:background="#000000"-->
-        <!--            android:layout_below="@+id/textView1"-->
-        <!--            android:textColor="#FFFFFF"-->
-        <!--            android:text="DEBUG: "-->
-        <!--            android:gravity="bottom"-->
-        <!--            android:scrollbars="vertical"/>-->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Pixhawk Status : " />
-        <TextView
-            android:id="@+id/textView_pixhawk"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Waiting connect ..." />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="MQTT Status : " />
-
-        <TextView
-            android:id="@+id/textView_mqtt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Waiting connect ..." />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/Arm"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="arm"
-            android:text="arm"/>
-
+            android:text="ARM" />
         <Button
-            android:id="@+id/DisArm"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="disarm"
-            android:text="disarm"/>
-
+            android:text="DISARM" />
         <Button
-            android:id="@+id/TAKEOFF"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="takeoff"
-            android:text="TAKEOFF"/>
+            android:text="TAKEOFF" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/edit_speed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="8"
+            android:hint="input speed (m/s)"
+            android:singleLine="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="change_speed"
+            android:text="CHANGE SPEED" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/edit_yaw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="8"
+            android:hint="input angle (°)"
+            android:singleLine="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="change_yaw"
+            android:text="CHANGE YAW" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/edit_lat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="5"
+            android:hint="lat"
+            android:text="25.042578"
+            android:singleLine="true" />
+        <EditText
+            android:id="@+id/edit_lng"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="5"
+            android:hint="lng"
+            android:text="121.537544"
+            android:singleLine="true" />
+        <EditText
+            android:id="@+id/edit_alt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="3"
+            android:text="10"
+            android:hint="alt"
+            android:singleLine="true" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="GOTO"
+            android:text="GoTo" />
+
     </LinearLayout>
 
     <LinearLayout
@@ -133,28 +140,20 @@
         android:orientation="horizontal">
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:gravity="center"
-            android:text="Drop_AED"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
-
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <SeekBar
-            android:id="@+id/seekBar_drop"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="10"
-            android:max="6"
-            android:min="0"
-            android:progress="3"/>
+            android:text="Pixhawk Status : "
+            android:textColor="#000000"
+            android:textSize="15dp"
+            android:typeface="serif"/>
+        <TextView
+            android:id="@+id/textView_PIXHAWK"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Waiting connect ..."
+            android:textColor="#000000"
+            android:textSize="15dp"
+            android:typeface="serif"/>
 
     </LinearLayout>
 
@@ -164,44 +163,42 @@
         android:orientation="horizontal">
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:gravity="center"
-            android:text="Gimbal_Front_Back"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
-
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <SeekBar
-            android:id="@+id/seekBar_gimbal_FB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="10"
-            android:max="6"
-            android:min="0"
-            android:progress="3"/>
+            android:text="FlightMode : "
+            android:textColor="#000000"
+            android:textSize="15dp"
+            android:typeface="serif"/>
+        <TextView
+            android:id="@+id/textView_FlightMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Waiting connect ..."
+            android:textColor="#000000"
+            android:textSize="15dp"
+            android:typeface="serif"/>
 
     </LinearLayout>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:gravity="center"
-            android:text="Gimbal_Left_Right"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
+            android:text="isArmed : "
+            android:textColor="#000000"
+            android:textSize="15dp"
+            android:typeface="serif"/>
+        <TextView
+            android:id="@+id/textView_isArmed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Waiting connect ..."
+            android:textColor="#000000"
+            android:textSize="15dp"
+            android:typeface="serif"/>
 
     </LinearLayout>
     <LinearLayout
@@ -209,49 +206,90 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <SeekBar
-            android:id="@+id/seekBar_gimbal_LR"
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="10"
-            android:max="6"
-            android:min="0"
-            android:progress="3"/>
+            android:text="Location : "
+            android:textColor="#000000"
+            android:textSize="15dp"
+            android:typeface="serif"/>
+        <TextView
+            android:id="@+id/textView_Location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Waiting connect ..."
+            android:textColor="#000000"
+            android:textSize="15dp"
+            android:typeface="serif"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Speed : "
+            android:textColor="#000000"
+            android:textSize="15dp"
+            android:typeface="serif"/>
+        <TextView
+            android:id="@+id/textView_Speed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Waiting connect ..."
+            android:textColor="#000000"
+            android:textSize="15dp"
+            android:typeface="serif"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Battery : "
+            android:textColor="#000000"
+            android:textSize="15dp"
+            android:typeface="serif"/>
+        <TextView
+            android:id="@+id/textView_Battery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Waiting connect ..."
+            android:textColor="#000000"
+            android:textSize="15dp"
+            android:typeface="serif"/>
 
     </LinearLayout>
 
     <TextView
         android:id="@+id/textView1"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:background="#000000"
+        android:gravity="bottom"
+        android:scrollbars="vertical"
+        android:text="CMD: "
+        android:textColor="#FFFFFF"
+        android:typeface="serif"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
         android:layout_centerHorizontal="true"
         android:background="#000000"
         android:textColor="#FFFFFF"
         android:scrollbars="vertical"
-        android:gravity="bottom" />
-
-<!--    <TextView-->
-<!--        android:id="@+id/textView2"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="150dp"-->
-<!--        android:layout_centerHorizontal="true"-->
-<!--        android:background="#000000"-->
-<!--        android:textColor="#FFFFFF"-->
-<!--        android:scrollbars="vertical"-->
-<!--        android:text="DEBUG: "-->
-<!--        android:gravity="bottom" />-->
-
-<!--    <RelativeLayout-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent">-->
-
-<!--        <me.lake.librestreaming.ws.StreamLiveCameraView-->
-<!--            android:id="@+id/stream_previewView"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="match_parent"/>-->
-
-<!--        <include layout="@layout/activity_live_ui"/>-->
-
-<!--    </RelativeLayout>-->
+        android:text="CMD_ACK: "
+        android:gravity="bottom"
+        android:typeface="serif"/>
 
 </LinearLayout>
